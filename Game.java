@@ -34,16 +34,15 @@ public class Game {
                     humanDecision = input.nextInt();
                 }
                 changeMarble(humanDecision);
-                switchTurns();
                 System.out.println("You took this much marbles: " + humanPlayer.getChoice() + "\n" + "Marbles still left: " + getMarbles());
             }
            else                               //Computer's turn
            {
                 System.out.println("***It's the computer's turn! ");
                 computerPlayer.move();
-                switchTurns();
                 System.out.println("***The computer took: " + computerPlayer.getChoice() + "\n" + "Marbles still left: " + getMarbles());
            }
+            switchTurns();
         }
 
     if(isTurn)
